@@ -6,7 +6,8 @@ pipeline {
 
             steps {
                 withMaven(maven : 'Maven-3.6.3') {
-                    mvn clean compile
+                	bat 'cd jenkins-example'
+                    bat 'mvn clean compile'
                 }
             }
         }
@@ -15,7 +16,8 @@ pipeline {
 
             steps {
                 withMaven(maven : 'Maven-3.6.3') {
-                    mvn test
+                	bat 'cd jenkins-example'
+                    bat 'mvn test'
                 }
             }
         }
